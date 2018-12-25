@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Agua Conserve</title>
+  <link rel="icon" href="https://static.wixstatic.com/media/0c718c_0fb26d9c3e424535a0c895890d8429b0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/0c718c_0fb26d9c3e424535a0c895890d8429b0%7Emv2.png"
+    type="image/png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- *** Formulario de LOGIN *** -->
+  <main id="seccionPrincipalLoginRegistro" class="show">
+    <div id="main-container">
+      <div><br><br><br><br></div>
+      
+      <section class="section-forms">
+        <div id="formInicio" class="">
+          <img src="img/logo.png" class="logo-qnut" alt="logo-aguametrik">
+          <div>
+
+            <h6 class="slogan-login">¡Ahorramos agua, damos vida!</h6>
+            <p class="valid-inputs" id="valid-inputs2"> </p>
+            <form class="col s12">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input id="email-login" type="email" class="validate">
+                <label for="email-login">Email</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="password-login" type="password" class="validate">
+                <label for="password-login">Contraseña</label>
+                <div><a href="#" class="update-password">
+                    <p id="update-password">¿Olvidó su contraseña?</p>
+                  </a></div>
+              </div>
+              <div>
+                <input type="button" id="loginButton" class="bot btn-large blue darken-2" value="Ingresa">
+              </div>
+            </form>
+          </div>
+          <br>
+
+          <div>
+            <div>
+              <p class="go-register">¿Aún no tienes cuenta?</p><a href="#" id="registerLink" class="link-to-register">
+                Regístrate ahora</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- *** Formulario de IDENTIFICATE *** -->
+        <div id="formIdentificate" class="hidden">
+          <h6 class="slogan-login">¡JUNTOS PODEMOS SEGUIR AHORRANDO AGUA!</h6>
+          <p class="valid-inputs" id="valid-inputs2"> </p>
+
+          <div class="input-field col s12">
+            <select id="identificate" class="" onchange="functionIdentificate()">
+              <option class="blue darken-2" value="" disabled selected>Selecciona un perfil</option>
+              <option class="blue darken-2" value="Empresa">Empresa</option>
+              <option class="blue darken-2" value="Colaborador">Colaborador</option>
+              <option class="blue darken-2" value="Usuario">Usuario</option>
+            </select>
+            <label> Identifícate</label>
+            <img class="img-gota-agua" src="IMG/dibujo-gota/gotavaso.jpg"> 
+
+          </div>
+          <br>
+        </div>
+
+        <!-- *** Formulario de Registro de EMPRESA *** -->
+        <!-- ***************************************** -->
+        <div id="formRegisterEmpresa" class="hidden">
+          <form>
+            <p class="slogan">¡Ahorramos agua, damos vida!</p>
+            <p class="valid-inputs" id="valid-inputs"> </p>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">business</i>
+                <input id="razonSocial" type="text" class="validate" name="rRazonsocial">
+                <label for="razonSocial">Razón Social</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lightbulb_outline</i>
+                <input id="RUC" type="text" class="validate" name="rRUC">
+                <label for="RUC">RUC</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input id="nameContactoEmpresa" type="text" class="validate" name="rNameContactoEmpresa">
+                <label for="nameContactoEmpresa">Nombre de contacto</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone_android</i>
+                <input id="celularEmpresa" type="text" class="validate" name="rCelularEmpresa" onkeypress="return soloNumerosEmpresa(event);">
+                <label for="celularEmpresa">celular</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">chrome_reader_mode</i>
+                <input id="sectorEmpresa" type="text" class="validate" name="rSectorEmpresa">
+                <label for="sectorEmpresa">Sector</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input id="emailEmpresa" type="email" class="validate" name="rEmailEmpresa">
+                <label for="emailEmpresa">Email</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="passwordEmpresa" type="password" class="validate" name="rPasswordEmpresa">
+                <label for="passwordEmpresa">Contraseña</label>
+                <span id="error-passwordEmpresa"></span>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">check</i>
+                <input id="confirPasswordEmpresa" type="password">
+                <label for="confirPasswordEmpresa">Confirmar contraseña</label>
+              </div>
+            </div>
+            <a href="#" id="registerButtonEmpresa" class="btn modal-trigger blue darken-2"> Registrar</a>
+          </form>
+        </div>
+
+
+        <!-- *** Formulario de Registro de COLABORADOR *** -->
+        <!-- ***************************************** -->
+        <div id="formRegisterColaborador" class="hidden">
+          <form>
+            <p class="slogan">Ingresar sus datos como colaborador</p>
+            <p class="valid-inputs" id="valid-inputs"> </p>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">business_cente</i>
+                <input id="empresaPertenece" type="text" class="validate">
+                <label for="empresaPertenece">Empresa a la que pertenece</label>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input id="nameColaborador" type="text" class="validate">
+                <label for="nameColaborador">Nombre de contacto</label>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone_android</i>
+                <input id="celularColaborador" type="text" class="validate" onkeypress="return soloNumerosColaborador(event);">
+                <label for="celularColaborador">Celular</label>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input id="emailColaborador" type="email" class="validate">
+                <label for="emailColaborador">Email</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="passwordColaborador" type="password" class="validate">
+                <label for="passwordColaborador">Contraseña</label>
+                <span id="error-passwordColaborador"></span>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">check</i>
+                <input id="confirPasswordColaborador" type="password">
+                <label for="confirPasswordColaborador">Confirmar contraseña</label>
+              </div>
+            </div>
+            <a href="#" id="registerButtonColaborador" class="btn modal-trigger blue darken-2"> Registrar</a>
+          </form>
+        </div>
+
+
+        <!-- *** Formulario de Registro de USUARIO *** -->
+        <!-- ***************************************** -->
+        <div id="formRegisterUsuario" class="hidden">
+          <form>
+            <p class="slogan">Estimado usuario regístrese</p>
+            <p class="valid-inputs" id="valid-inputs"> </p>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input id="nameUsuario" type="text" class="validate">
+                <label for="nameUsuario">Nombre</label>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone_android</i>
+                <input id="celularUsuario" type="text" class="validate" onkeypress="return soloNumerosUsuario(event);">
+                <label for="celularUsuario">Celular</label>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input id="emailUsuario" type="email" class="validate">
+                <label for="emailUsuario">Email</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="passwordUsuario" type="password" class="validate">
+                <label for="passwordUsuario">Contraseña</label>
+                <span id="error-passwordUsuario"></span>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">check</i>
+                <input id="confirPasswordUsuario" type="password">
+                <label for="confirPasswordUsuario">Confirmar contraseña</label>
+              </div>
+            </div>
+            <a href="#" id="registerButtonUsuario" class="btn modal-trigger blue darken-2"> Registrar</a>
+          </form>
+            <p class="simple-text">O ingresa con:</p>
+            <div class="icon-redes">
+              <div class="icon-snf"><a href="#" ><img src="img/Logos/icon-facebook-login.svg" class="snf-face" id="faceButton" alt="icono-facebook"></a></div>
+              <div class="icon-sng"><a href="#"><img src="img/Logos/icon-google-login.svg" class="sng-goo" id="googleButton" alt="icono-google"></a></div>
+            </div>
+    
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+  <!-- <div id="confirm"></div> -->
+
+  <!--  ======== SECCIÓN PIE DE PÁGINA =========-->
+  <footer>
+
+  </footer>
+ 
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="firebase.js">      </script>
+  <script src="login_colaborador.js">      </script>
+  <script src="login_usuario.js">      </script>
+  <!-- <script src="js/Tabla_diagnostico.js"></script> -->
+  <script src="js/validations.js">   </script>
+  <script src="js/login-dom.js">     </script>
+  <script src="login_empresa.js">      </script>
+  <!-- <script src="js/plataforma-dom.js"> </script> -->
+  <!-- <script src="js/sede.js"> </script> -->
+</body>
+</html>

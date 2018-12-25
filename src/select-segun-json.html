@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyAJeQyrbkbUxuq8p2wafd4m_T_OG-ILXpQ",
+			authDomain: "aguametrik-4bdbc.firebaseapp.com",
+			databaseURL: "https://aguametrik-4bdbc.firebaseio.com",
+			projectId: "aguametrik-4bdbc",
+			storageBucket: "aguametrik-4bdbc.appspot.com",
+			messagingSenderId: "1027300417762"
+		};
+		firebase.initializeApp(config);
+	</script>
+
+</head>
+
+<body onLoad="myOnLoad()">
+
+	<div class="container">
+		<div class="row">
+				<form>
+						<select name="opciones-de-BD-firebase2" id="opciones-de-BD-firebase2">
+							<option>Seleccione una opcion</option>
+						</select>
+					</form>
+		</div>
+	</div>
+
+	<script>
+		//Codigo a Ejecutar al Cargar el formulario
+		function myOnLoad() {
+			cargar_opcionesDesdeFirebase2()
+		}
+
+		// funcion para Cargar datos desde firebase al campo <select>
+		function cargar_opcionesDesdeFirebase2() {
+			refDiagnostico = firebase.database().ref().child("diagnostico");
+			refDiagnostico.on("value", function (snap) {
+				let datos = snap.val();
+				console.log(datos)
+
+				for (let key in datos) {
+					let arrayFirebase = datos[key].moduloTipogrifo
+					console.log(arrayFirebase);
+					// arrayFirebase.sort();
+					addOptions("opciones-de-BD-firebase2", arrayFirebase);
+				}
+			});
+		}
+
+		// Rutina para agregar opciones a un <select>
+		function addOptions(domElement, arrayFirebase) {
+			var select = document.getElementsByName(domElement)[0];
+			// for (value in arrayFirebase) {
+				var option = document.createElement("option");
+				option.text = arrayFirebase;
+				select.add(option);
+			// }
+		}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</body>
+</html>

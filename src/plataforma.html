@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AguaMetrik</title>
+  <link rel="icon" href="https://static.wixstatic.com/media/0c718c_0fb26d9c3e424535a0c895890d8429b0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/0c718c_0fb26d9c3e424535a0c895890d8429b0%7Emv2.png"
+    type="image/png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--  CDN del Morris para graficos estadisticos -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+</head>
+
+<body>
+
+  <!-- <header>
+    <nav class="sidenav-trigger brown">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Q-Nutrition</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li> <a href="#" id="start">Inicio</a> </li>
+          <li> <a href="#" id="myPost">Mis publicaciones</a> </li>
+          <li> <a href="#" id="signOut" class="signOut">Cerrar Sesión</a> </li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#" id="start1">Inicio</a></li>
+      <li><a href="#" id="myPost1">Mi Muro</a></li>
+      <li><a href="#" id="signOut1" class="signOut">Salir</a></li>
+    </ul>
+  </header> -->
+
+  <input type="button" value="cerrar sesion" id="signOut" class="signOut">
+  
+
+   <!-- ======================================================================================= -->
+  <!-- =============================  PLATAFORMA O MURO DE CADA EMPRESA  ===================== -->
+  <!-- ======================================================================================= -->
+  <!-- ======================================================================================= -->
+
+  <!-- MENU HAMBURQUESA (SIDENAV) -->
+  <!-- <nav class="indigo darken-4"> <img class="circle" src="IMG/Icono/AguaMetrik.ico"> -->
+    <nav id="seccionSidebar" class="indigo blue darken-1"> <img class="circle" src="IMG/Icono/AguaMetrik.ico">
+    </nav>
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background indigo blue darken-1">
+            <img class="tamano" src="">
+          </div>
+          <a href="#user"><img class="circle" src="IMG/Logos/Favicon-Aguaconserve.jpg"></a>
+          <a href="#name"><span class="white-text name">Nombre Empresa</span></a>
+          <!-- <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+        </div>
+      </li>
+      <li><a href="#seguimientoATuconsumo" id="btn-seguimientoATuconsumo"><i class="material-icons">chrome_reader_mode</i>Seguimiento
+          a tu consumo</a></li>
+      <!-- <li><a href="#!">Hacer un diagnóstico</a></li> -->
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a class="subheader">También puedes:</a></li>
+      <li><a class="waves-effect" href="#menuRealizarUnDiagnostico" id="btn-menuRealizarUnDiagnostico"><i class="material-icons">touch_app</i>Realizar
+          un diagnóstico</a></li>
+      <li><a class="waves-effect" href="#menuVerDashboard" id="btn-menuVerDashboard"> <i class="material-icons">track_changes</i>Ver
+          dashboard</a></li>
+      <li><a class="waves-effect" href="#menuNuestraTecnologia" id="btn-menuNuestraTecnologia"> <i class="material-icons">business</i>Nuestra
+          tecnología</a></li>
+    </ul>
+    <a id="seccionBotonMenu" href="#" data-target="slide-out" class="indigo blue darken-1 sidenav-trigger btn-floating pulse"><i
+        class="material-icons">menu</i></a>
+  
+  
+    <!-- SECCIÓN BIENVENIDA A LA PLATAFORMA AGUAMETRIK -->
+    <section id="seccionBienvenidaALaPlataforma" class="show">
+      <div class="container">
+        <img src="IMG/dibujo-gota/gota1.jpg" class="img-gota-agua">
+        <h4 id="arcText">Bienvenido al programa de consumo de Agua</h4>
+        <p>Con este programa podrás controlar tu consumo de agua mensual; además podrás saber que Hacer
+          para ahorrar más agua. Acompáñame en este recorrido. </p>
+        <input type="button" id="btn-iniciemosjuntos" value="Iniciemos Juntos" class="bot btn-large blue darken-2">
+      </div>
+  
+    </section>
+  
+    <!-- SECCIÓN SEGUIMIENTO A TU CONSUMO -->
+    <section id="seccionSeguimientoATuConsumo" class="hidden">
+      <div class="container">
+        <h4 id="seguimientoATuconsumo" class="color-black"> SEGUIMIENTO CONSUMO </h4>
+  
+        <div class="row">
+          <img class="img-gota-agua" src="./IMG/dibujo-gota/gota-ahorrandook.jpg">
+          <div class="col s12 m12 l6 xl6">
+            <form id="form-sede">
+              <div class="form-group">
+                <input type="text" name="sedeNombre" value="" id="sede-nombre" placeholder="Nombre de sede">
+              </div>
+              <div class="form-group">
+                <input type="text" name="sedeUbicacion" value="" id="sede-ubicacion" placeholder="Ubicación">
+              </div>
+              <div class="form-group">
+                <input type="text" name="sedeSuministro" value="" id="sede-suministro" placeholder="Suministro">
+              </div>
+              <input class="bot btn-large blue darken-2" type="submit" name="" value="Insertar sede" id="btn-insertar-sede">
+            </form>
+          </div>
+  
+          <div class="col s12 m12 l6 xl6">
+            
+            <!-- Tabla de SEDES -->
+            <table class="highlight">
+              <thead>
+                <tr>
+                  <th scope="col">Sede</th>
+                  <th scope="col">Ubicación</th>
+                  <th scope="col">Suministro</th>
+                  <th> </th>
+                  <th> </th>
+                </tr>
+              </thead>
+              <tbody id="tbody-tabla-sede">
+  
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <br> <br> 
+      <!-- ================================================================ -->
+      <!-- ================Boton del Grafico Morris======================== -->
+      <div id="graphSedeMiConsumo" style="height: 350px;"></div>
+      <button type="button" id="btn-actualiza-graph"> Cargar Grafico</button>
+      <!-- ================================================================ -->
+    </section>
+  
+  
+    <!-- SECCIÓN REALIZAR UN DIAGNÓSTICO -->
+    <aside id="seccionRealizarUnDiagnostico" class="hidden">
+      <div class="container">
+        <h5 id="realizarUnDiagnostico" class="color-black"> DIAGNÓSTICO </h5>
+  
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <form id="form-diagnostico">
+              <div class="form-group">
+                <label for="modulo-tipogrifo"> Tipo de Grifo</label>
+                <input type="text" name="moduloTipogrifo" class="form-control" value="" id="modulo-tipogrifo">
+              </div>
+              <div class="form-group">
+                <label for="modulo-unidades"> Numero de unidades</label>
+                <input type="text" name="moduloUnidades" class="form-control" value="" id="modulo-unidades">
+              </div>
+              <div class="form-group">
+                <label for="modulo-tipouso"> Tipo de Uso</label>
+                <input type="text" name="moduloTipouso" class="form-control" value="" id="modulo-tipouso">
+              </div>
+              <div class="form-group">
+                <label for="modulo-caudal"> Caudal</label>
+                <input type="text" name="moduloCaudal" class="form-control" value="" id="modulo-caudal">
+              </div>
+              <input class="bot btn-large blue darken-2" type="submit" name="" value="Insertar datos" id="btn-insertar-diagnostico">
+            </form>
+          </div>
+  
+          <div class="col s12 m12 l6 xl6">
+            <!-- Tabla del Diagnóstico -->
+            <table class="highlight">
+              <thead>
+                <tr>
+                  <th scope="col">Tipo de grifo</th>
+                  <th scope="col">Unidades</th>
+                  <th scope="col">Tipo de uso</th>
+                  <th scope="col">Caudal</th>
+                  <th scope="col">Ahorro</th>
+                  <th scope="col">Descripción</th>
+                  <th> </th>
+                  <th> </th>
+                </tr>
+              </thead>
+              <tbody id="tbody-tabla-diagnostico">
+              </tbody>
+            </table>
+          </div>
+  
+        </div>
+      </div>
+  
+   
+  
+    </aside>
+  
+  
+    <!-- SECCIÓN VER DASHBOARD - GRAFICOS -->
+    <aside id="seccionVerDashboard" class="hidden">
+      <div class="container">
+        <h5 id="verDashboard" class="color-black"> DASHBOARD </h5>
+        <img src="IMG/dashboard.png">
+      </div>
+    </aside>
+  
+    <!-- SECCIÓN NUESTRA TECNOLOGÍA -->
+    <aside id="seccionNuestraTecnologia" class="hidden">
+      <div class="container">
+        <h5 id="menuNuestraTecnologia"> NUETSRA TECNOLOGIA </h5>
+        <p> It looks like you're using the development build of the Firebase JS SDK.
+          When deploying Firebase apps to production, it is advisable to only import
+          the individual SDK components you intend to use.</p>
+        <p> It looks like you're using the development build of the Firebase JS SDK.
+          When deploying Firebase apps to production, it is advisable to only import
+          the individual SDK components you intend to use.</p>
+  
+      </div>
+      <div class="video-container">
+        <!-- para link dek video considerar el link: EMBED CODE; solo el link de video  -->
+        <iframe width="853" height="480" src="//www.youtube.com/embed/rXW5oLhBMCE" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <!-- <video class="responsive-video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
+  
+    </aside>
+  
+  
+    <!--  ======== SECCIÓN PIE DE PÁGINA =========-->
+    <footer>
+  
+    </footer>
+
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="firebase.js">                     </script>
+  <!-- <script src="login_colaborador.js">        </script>
+  <script src="login_usuario.js">      </script> -->
+  <script src="js/validations.js">               </script>
+  <!-- <script src="js/login-dom.js">             </script> -->
+  <!-- <script src="login_empresa.js">            </script> -->
+  <script src="js/plataforma.js">                </script>
+  <script src="js/plataforma-dom.js">            </script>
+  <script src="js/Tabla_diagnostico.js">         </script>
+  <script src="js/sede.js">                      </script>
+
+  <!-- provando texto con arco -->
+  <!-- <script src="arctext/jquery.arctext.js">       </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.arctext.js"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script> -->
+ 
+</body>
+
+</html>

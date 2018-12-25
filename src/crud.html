@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>AguaMetrik</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+	<script src="js/Tabla_diagnostico.js"></script>
+</head>
+
+<body>
+
+	<div class="container">  
+		<div class="row">
+			
+			<div class="col-sm-12 col-md-12 col-lg-6">
+					<form id="form-diagnostico">
+							<div class="form-group">
+								<label for="modulo-tipogrifo"> Tipo de Grifo</label>
+								<input type="text" name="moduloTipogrifo" class="form-control" value="" id="modulo-tipogrifo">
+							</div>
+							<div class="form-group">
+								<label for="modulo-unidades"> Numero de unidades</label>
+								<input type="text" name="moduloUnidades" class="form-control"  value="" id="modulo-unidades">
+							</div>
+							<div class="form-group">
+								<label for="modulo-tipouso"> Tipo de Uso</label>
+								<input type="text" name="moduloTipouso" class="form-control"   value="" id="modulo-tipouso">
+							</div>
+							<div class="form-group">
+								<label for="modulo-caudal"> Caudal</label>
+								<input type="text" name="moduloCaudal" class="form-control"    value="" id="modulo-caudal">
+							</div>
+							<div class="form-group">
+									<label for="modulo-eliminar"> Eliminar</label>
+									<input type="text" name="moduloEliminar" class="form-control"    value="" id="modulo-eliminar">
+							</div>
+							<input type="submit" name="" value="Insertar datos" id="btn-insertar-diagnostico">
+					</form>
+			</div>
+
+			<div class="clo-sm-12 col-md-12 col-lg-6">
+					<!-- Tabla del Diagnóstico -->
+					<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col">Tipo de grifo</th>
+									<th scope="col">Unidades</th>
+									<th scope="col">Tipo de uso</th>
+									<th scope="col">Caudal</th>
+									<th scope="col">Ahorro</th>
+									<th scope="col">Descripción</th>
+									<th> </th>
+									<th> </th>
+								</tr>
+							</thead>
+							<tbody id="tbody-tabla-diagnostico">
+							
+							</tbody>
+						</table>				
+				</div>
+
+		</div>
+	</div> <br><br>
+
+	
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"> </script>
+	<script src="firebase.js">         </script>
+
+</body>
+
+</html>

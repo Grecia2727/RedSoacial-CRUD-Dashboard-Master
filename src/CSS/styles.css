@@ -1,0 +1,234 @@
+/* index (login y register) */
+.hidden {
+  display: none; 
+  padding-top: 30px;
+} 
+
+.show {
+  display: block;
+}
+  
+body {
+  /* background-image:url(img/fondo.jpg); */
+  /* background-color: #1976d2; */
+  background-color: #ffffff;
+  background-size: cover;
+  font-family: Quicksand;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+main{
+  background-image: url(../IMG/fondos/azul_natural-1280x960.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100vh;
+  background-position: center center;
+}
+.tamano{
+  size: 5px;
+}
+  
+.section-forms {
+  width: 400px;
+  height: auto;
+  box-align: center;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 35px;
+  box-sizing: border-box;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+}
+
+
+
+.valid-inputs {
+  color: red;
+  font-weight: 600;
+  padding: 5px;
+  margin: 10px;
+}
+
+.img-gota-agua{
+ height: 15%;
+ width: 15%
+} 
+
+#seccionPrincipalLoginRegistro, #section-forms{
+  background-color: #1976d2;
+}
+
+.section-forms {
+  width: 400px;
+  height: auto;
+  box-align: center;
+  text-align: center;
+  background-color: #ffffff;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 35px;
+  border-radius: 10%;
+  box-sizing: border-box;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+}
+
+.logo-qnut {
+  margin-top: 10px;
+  margin-bottom: 20px; 
+  width: 70%;
+  height: 30%;
+}
+
+.simple-text {
+  text-align: center;
+  padding-top: -10px;
+  font-size: 16px;
+  color: #1976d2;
+  font-weight: 500;
+}
+  
+.update-password {
+  text-align: right;
+  color: #1976d2;
+  font-size: 12px;
+  padding: auto;
+  text-decoration: underline;
+  position: relative;
+  top: -5px;
+}
+
+.bot {
+  width:300px;
+  padding: auto;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+.container{
+  padding: auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* .iconLoader {
+  background-image: url(img/ajax-loader.gif)
+} */
+
+.inputs {
+  padding: 0px;
+}
+
+.input-field .prefix {
+  color: #9e9e9e;
+  font-size: 24px;
+}
+ 
+.input-field .prefix.active {
+  /* color: #bd8e9c; */
+  /* color: cornflowerblue; */
+  color: #1976d2;
+}
+
+.material-icons .prefix.active {
+  /* color: #bd8e9c; */
+  /* color: cornflowerblue; */
+  color: #1976d2;
+}
+  
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  /* border-bottom: 1px solid #bd8e9c;
+  -webkit-box-shadow: 0 1px 0 0 #bd8e9c;
+  box-shadow: 0 1px 0 0 #bd8e9c; */
+  border-bottom: 1px solid #40576E;
+  -webkit-box-shadow: 0 1px 0 0 #40576E;
+  box-shadow: 0 1px 0 0 #40576E;
+}
+ 
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label {
+  /* color: #bd8e9c; */
+  color: #40576E;
+}
+ 
+.material-icons {
+  line-height: 1;
+}
+
+.snf-face {
+  height:40px;
+  width:40px; 
+  margin: 0px 8px;
+}
+
+.sng-goo {
+  height:40px;
+  width:40px;
+  margin: 0px 8px;
+}
+
+.icon-snf {
+  display: inline-block;
+}
+
+.icon-sng {
+  display: inline-block;
+}
+
+.slogan {
+  /* color: #40576E; */
+  color: #1976d2;
+  font-weight: 550;
+  font-size: 18px;
+  margin: 16px;
+  margin-bottom: 10px;
+}
+
+.slogan-login {
+  color:#1976d2;  
+  font-weight: 550;
+  font-size: 16px;
+  margin: 15px;
+}
+
+footer {
+  text-align: left;
+  color: #333333;
+  font-size: 12px;
+  margin-left: 20px;  
+}
+
+.go-register {  
+  text-align: center;
+  font-size: 16px;
+  color: #727272;
+  font-weight: 500;
+}
+
+.link-to-register{
+  color: #1976d2;
+  text-decoration:underline;
+  font-weight: 700;
+}
+
+.section-footer {
+  text-align: center;
+}
+
+.img-foot {
+  width:18px;
+  height: 10px;
+}
+  
+
+/* da color al grafico */
+#graphSedeMiConsumo{
+  background-color: aquamarine;
+}
